@@ -6,9 +6,6 @@
   <title>PORTAL ELECTRÓNICO JUDICIAL | Corte Superior de Justicia de Puno</title>
   
   <style>
-    /* ==========================================================
-        VARIABLES Y PALETA CROMÁTICA INSTITUCIONAL
-        ========================================================== */
     :root {
       --mag-darkest: #18020e;
       --mag-dark: #3f0314;
@@ -1360,7 +1357,7 @@
       requestAnimationFrame(animateProgress);
     });
 
-    // LISTA DE LOS 9 DOCUMENTOS OFICIALES SUBIDOS A GITHUB (CON BLACKOUT)
+    // LISTA DE LOS 9 DOCUMENTOS OFICIALES SUBIDOS A GITHUB
     var ACTUADOS = [
       {
         n: 1, f: "Fjs. 1-5", d: "15/03/2023", t: "Actuado N° 01: Demanda Principal (Almanza vs. Municipalidad)", des: "Escrito de demanda sobre reconocimiento de vínculo laboral y derechos.",
@@ -1658,7 +1655,6 @@
       openModal('modal-generic-interop');
     }
 
-    // FUNCIÓN PARA ABRIR EL VISOR INTERACTIVO EN PANTALLA MEDIANTE IFRAME
     function openPdfDocument(num) {
       const act = ACTUADOS.find(a => a.n === num);
       if (!act) return;
@@ -1713,7 +1709,6 @@
       });
     }
 
-    // CHATBOT IURISNIANO
     function openAndHidePromptChat() {
       document.getElementById('chat-prompt-bubble').style.display = 'none';
       toggleChatbotWindow();
